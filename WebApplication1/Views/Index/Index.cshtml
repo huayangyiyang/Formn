@@ -1,0 +1,750 @@
+﻿@using Model
+@model List<Partition>
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>《英雄联盟》官方论坛 -  Powered by Discuz!</title>
+    <link rel="icon" href="http://lol.qq.com/favicon.ico" mce_href="http://lol.qq.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://lol.qq.com/favicon.ico" mce_href="http://lol.qq.com/favicon.ico" type="image/x-icon">
+    <meta name="keywords" content="lol论坛,lol官方论坛,英雄联盟官方论坛,腾讯游戏社区" />
+    <meta name="description" content="英雄联盟（LOL）官方论坛是腾讯为英雄联盟玩家打造的互动平台。在英雄联盟论坛，你可以获取全面的资讯、参加精彩活动、和官方团队近距离接触、与庞大的玩家分享交流。 " />
+    <meta name="generator" content="Discuz! X2.5" />
+    <meta name="author" content="Discuz! Team and Comsenz UI Team" />
+    <meta name="copyright" content="2001-2012 Comsenz Inc." />
+    <meta name="MSSmartTagsPreventParsing" content="True" />
+    <meta http-equiv="MSThemeCompatible" content="Yes" />
+    <link rel="stylesheet" type="text/css" href="~/Content/style_6c2b1db9_9_common.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/style_6c2b1db9_9_forum_index.css" />
+    <script type="text/javascript">var STYLEID = '6c2b1db9_9', STATICURL = 'static/', IMGDIR = 'static/image/common', VERHASH = 'D1S', charset = 'utf-8', discuz_uid = '0', cookiepre = 'bbs_MaaMr1_2132_', cookiedomain = '', cookiepath = '/', showusercard = '1', attackevasive = '0', disallowfloat = 'newthread', creditnotice = '1|威望|,2|金币|,3|贡献|', defaultstyle = '', REPORTURL = 'aHR0cDovL2Jicy5sb2wucXEuY29tL2ZvcnVtLnBocA==', SITEURL = 'http://bbs.lol.qq.com/', JSPATH = 'static/js/', cssPre = '6c2b1db9';</script>
+        <script src="~/scripts/common.js" type="text/javascript"></script>
+        <script src="~/scripts/forum.js" type="text/javascript"></script>
+    
+
+    <meta name="application-name" content="《英雄联盟》官方论坛" />
+    <meta name="msapplication-tooltip" content="《英雄联盟》官方论坛" />
+    <meta name="msapplication-task" content="name=论坛首页;action-uri=http://bbs.lol.qq.com/forum.php;icon-uri=http://bbs.lol.qq.com/static/image/common/bbs.ico" />
+    <link rel="archives" title="《英雄联盟》官方论坛" href="http://bbs.lol.qq.com/archiver/" />
+    <script src="~/scripts/jquery-3.3.1.js"></script>
+    <style>
+        .qt_tips_box {
+            background: #f0fbff;
+            border: 1px solid #7ea0cd;
+            color: #7ea0cd;
+            padding: 0 20px 0 10px;
+            text-align: right;
+            position: absolute;
+        }
+
+            .qt_tips_box a.qt_tips_close {
+                color: #8aa8d2;
+                position: absolute;
+                right: 5px;
+                top: 0;
+                line-height: 21px;
+            }
+
+        .qt_tips_arrow {
+            position: absolute;
+            background: url(../../Images/arrow.png) no-repeat 0 0;
+            width: 6px;
+            height: 5px;
+            line-height: 2000px;
+            overflow: hidden;
+            top: -5px;
+            right: 5px;
+        }
+        .img-kuandu{
+            width:125px;
+             height:50px;
+        }
+
+        body {
+            
+           background: url(../../Images/index_bg.jpg) no-repeat center 0;
+            
+        }
+
+        #hd .wp .hdc h2 img {
+            display: none;
+        }
+
+        #hd .wp .hdc h2 a {
+            display: block;
+            width: 320px;
+            height: 80px;
+        }
+
+        #hd h2 {
+            padding: 0 0px 8px 0;
+        }
+    </style>
+    <script>
+    
+    </script>
+</head>
+
+<body id="nv_forum" class="pg_index" onkeydown="if(event.keyCode==27) return false;">
+    <div id="append_parent"></div><div id="ajaxwaitid"></div>
+   
+    <div id="toptb" class="cl">
+        <div class="wp">
+            <div class="z"><a href="javascript:;" onclick="setHomepage('http://bbs.lol.qq.com/');">设为首页</a><a href="http://bbs.lol.qq.com/" onclick="addFavorite(this.href, '《英雄联盟》官方论坛');return false;">收藏本站</a>
+            <script type="text/javascript">var _speedMark = new Date();</script></div>
+            <div class="y">
+                <a id="switchblind" href="javascript:;" onclick="toggleBlind(this)" title="开启辅助访问" class="switchblind">开启辅助访问</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="qmenu_menu" class="p_pop blk" style="display: none;">
+        <div class="ptm pbw hm">
+            请 <a href="javascript:;" class="xi2" onclick="lsSubmit()"><strong>登录</strong></a> 后使用快捷导航<br />没有帐号？<a href="member.php?mod=register" class="xi2 xw1">注册</a>
+        </div>
+    </div>
+    <div id="hd">
+        <div class="wp">
+            <div class="hdc cl">
+                <h2><a href="./" title="《英雄联盟》官方论坛"><img src="~/Images/lol_logo.png" alt="《英雄联盟》官方论坛" border="0" /></a></h2>
+
+                <script src="~/scripts/logging.js" type="text/javascript"></script>
+                <form method="post" autocomplete="off" id="lsform" action="member.php?mod=logging&amp;action=login&amp;loginsubmit=yes&amp;infloat=yes&amp;lssubmit=yes" onsubmit="return lsSubmit();">
+                    <div class="fastlg cl">
+                        <span id="return_ls" style="display:none"></span>
+                        <div class="y pns">
+                            <table cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>
+                                        <span class="ftid">
+                                            <select name="fastloginfield" id="ls_fastloginfield" width="40" tabindex="900">
+                                                <option value="username">用户名</option>
+                                                <option value="email">Email</option>
+                                            </select>
+                                        </span>
+                                        <script type="text/javascript">simulateSelect('ls_fastloginfield')</script>
+                                    </td>
+                                    <td><input type="text" name="username" id="ls_username" autocomplete="off" class="px vm" tabindex="901" /></td>
+                                    <td class="fastlg_l"><label for="ls_cookietime"><input type="checkbox" name="cookietime" id="ls_cookietime" class="pc" value="2592000" tabindex="903" />自动登录</label></td>
+                                    <td>&nbsp;<a href="javascript:;" onclick="showWindow('login', 'member.php?mod=logging&action=login&viewlostpw=1')">找回密码</a></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="ls_password" class="z psw_w">密码</label></td>
+                                    <td><input type="password" name="password" id="ls_password" class="px vm" autocomplete="off" tabindex="902" /></td>
+                                    <td class="fastlg_l"><button type="submit" class="pn vm" tabindex="904" style="width: 75px;"><em>登录</em></button></td>
+                                    <td>&nbsp;<a href="member.php?mod=register" class="xi2 xw1">注册</a></td>
+                                </tr>
+                            </table>
+                            <input type="hidden" name="quickforward" value="yes" />
+                            <input type="hidden" name="handlekey" value="ls" />
+                        </div>
+                        <style>
+                            .y.pns {
+                                display: none;
+                            }
+
+                            .ptlogin_simple {
+                                float: right;
+                            }
+
+                                .ptlogin_simple button {
+                                    width: 75px;
+                                }
+                        </style>
+                        <table cellspacing="0" cellpadding="0" class="ptlogin_simple">
+                            <tr>
+                                <td class="fastlg_l">
+                                    <button type="submit" class="pn vm" onclick="showWindow('login', 'member.php?mod=logging&amp;action=login&amp;infloat=yes')">
+                                        <em>登录</em>
+                                    </button>
+                                </td>
+                                <td><a href="member.php?mod=register" target="_blank">注册新帐号</a></td>
+                            </tr>
+                            <tr>
+                                <td class="fastlg_l">&nbsp;</td>
+                                <td><a href="//aq.qq.com/cn/findpsw/findpsw_index" target="_blank">忘了密码？</a></td>
+                            </tr>
+                        </table>
+
+                        <div class="fastlg_fm y" style="margin-right: 10px; padding-right: 10px">
+                            <p><a href="plugin.php?id=wechat:login"><img src="~/Images/wechat_login.png" class="vm" /></a></p>
+                            <p class="hm xg1" style="padding-top: 2px;">扫一扫，访问微社区</p>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div id="nv">
+                <a href="javascript:;" id="qmenu" onmouseover="showMenu({'ctrlid':'qmenu','pos':'34!','ctrlclass':'a','duration':2});">快捷导航</a>
+                <ul>
+                <li class="a" id="mn_forum"><a href="~/Index/Index" hidefocus="true" title="BBS">论坛首页<span>BBS</span></a></li>
+                <li id="mn_Nb7ca"><a href="http://lol.qq.com/main.shtml" hidefocus="true" target="_blank">官网首页</a></li>
+                <li id="mn_N3892"><a href="https://kf.qq.com/product/lol.html?pc_scene=forum" hidefocus="true" target="_blank">QQ在线客服</a></li>
+                <li id="mn_N7039"><a href="http://weibo.com/lol" hidefocus="true" target="_blank">官方微博</a></li><li id="mn_Ne88f"><a href="http://lol.qq.com/act/a20161009riot/index.html" hidefocus="true" style="color: orange">问拳头</a></li></ul>
+            </div>
+            <div id="mu" class="cl">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="wp" class="wp">
+        
+    <script src="~/scripts/comm.js" type="text/javascript"></script>
+        <script>
+function del_riot_remind(){
+var url = 'plugin.php?id=qt:misc&action=del_riot_remind&r='+Math.random();
+QTCOMM.FloadJS(url,function(){
+var data = cgiDataDelRiotRemind;
+if (data.error_code != 0) {
+showDialog(data.error_msg, 'error', 'Riot官方提醒');
+return;
+}
+qt_display('del_riot_remind');
+});
+
+}
+function qt_display(id){
+var traget=document.getElementById(id);
+if(traget.style.display=="none"){
+traget.style.display="";
+}else{
+traget.style.display="none";
+}
+}
+
+function show_del_riot_remind(){
+var del_riot_remind_div = document.getElementById("myprompt");
+if(del_riot_remind_div){
+var left = qtGetOffsetLeft(del_riot_remind_div)-70;//del_riot_remind_div.offsetLeft-70;
+var top = qtGetOffsetTop(del_riot_remind_div)+20;//del_riot_remind_div.offsetTop+20;
+var del_riot_remind = document.getElementById("del_riot_remind");
+//alert("left:"+left+" top:"+top);
+if(del_riot_remind){
+del_riot_remind.style.left=left+"px";
+del_riot_remind.style.top=top+"px";
+}
+
+}
+}
+
+function qtGetOffsetLeft(o){
+var left=0;
+while (o!=null && o!=document.body)
+{
+left+=o.offsetLeft;
+o=o.offsetParent;
+}
+return left;
+}
+/*
+ *兼容ie6以上和ff的offsetTop
+ */
+function qtGetOffsetTop(o){
+var top=0;
+while(o!=null && o!= document.body){
+top+=o.offsetTop;
+o=o.offsetParent;
+}
+return top;
+}
+
+show_del_riot_remind();
+window.onresize = function(){
+show_del_riot_remind();
+}
+// 获取url参数
+function getQueryString(name) {
+var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+var url = decodeURIComponent(window.location.search.substr(1));
+var r = url.match(reg);
+if (r != null) return unescape(r[2]); return null;
+}
+var stat_id = getQueryString('stat_id');
+if(stat_id){
+if(typeof(pgvSendClickQt)!='undefined'){var tag='BBS.LOL.WEBSTAT.'+Number(stat_id);pgvSendClickQt({hottag:tag});}
+}
+function showQtWindow(k, url, callback, mode, cache, menuv) {
+mode = isUndefined(mode) ? 'get' : mode;
+cache = isUndefined(cache) ? 1 : cache;
+var menuid = 'fwin_' + k;
+var menuObj = $(menuid);
+var drag = null;
+var loadingst = null;
+var hidedom = '';
+
+if(disallowfloat && disallowfloat.indexOf(k) != -1) {
+if(BROWSER.ie) url += (url.indexOf('?') != -1 ?  '&' : '?') + 'referer=' + escape(location.href);
+location.href = url;
+doane();
+return;
+}
+
+var fetchContent = function() {
+if(mode == 'get') {
+menuObj.url = url;
+url += (url.search(/\?/) > 0 ? '&' : '?') + 'infloat=yes&handlekey=' + k;
+url += cache == -1 ? '&t='+(+ new Date()) : '';
+if(BROWSER.ie &&  url.indexOf('referer=') < 0) {
+url = url + '&referer=' + encodeURIComponent(location);
+}
+ajaxget(url, 'fwin_content_' + k, null, '', '', function() {initMenu();show();if(typeof(callback)!='undefined'){callback();}});
+} else if(mode == 'post') {
+menuObj.act = $(url).action;
+ajaxpost(url, 'fwin_content_' + k, '', '', '', function() {initMenu();show();if(typeof(callback)!='undefined'){callback();}});
+}
+if(parseInt(BROWSER.ie) != 6) {
+loadingst = setTimeout(function() {showDialog('', 'info', '<img src="' + IMGDIR + '/loading.gif"> 请稍候...')}, 500);
+}
+};
+var initMenu = function() {
+clearTimeout(loadingst);
+var objs = menuObj.getElementsByTagName('*');
+var fctrlidinit = false;
+for(var i = 0; i < objs.length; i++) {
+if(objs[i].id) {
+objs[i].setAttribute('fwin', k);
+}
+if(objs[i].className == 'flb' && !fctrlidinit) {
+if(!objs[i].id) objs[i].id = 'fctrl_' + k;
+drag = objs[i].id;
+fctrlidinit = true;
+}
+}
+};
+var show = function() {
+hideMenu('fwin_dialog', 'dialog');
+v = {'mtype':'win','menuid':menuid,'duration':3,'pos':'00','zindex':JSMENU['zIndex']['win'],'drag':typeof drag == null ? '' : drag,'cache':cache};
+for(k in menuv) {
+v[k] = menuv[k];
+}
+showMenu(v);
+};
+
+if(!menuObj) {
+menuObj = document.createElement('div');
+menuObj.id = menuid;
+menuObj.className = 'fwinmask';
+menuObj.style.display = 'none';
+$('append_parent').appendChild(menuObj);
+evt = ' style="cursor:move" onmousedown="dragMenu($(\'' + menuid + '\'), event, 1)" ondblclick="hideWindow(\'' + k + '\')"';
+if(!BROWSER.ie) {
+hidedom = '<style type="text/css">object{visibility:hidden;}</style>';
+}
+menuObj.innerHTML = hidedom + '<table cellpadding="0" cellspacing="0" class="fwin"><tr><td class="t_l"></td><td class="t_c"' + evt + '></td><td class="t_r"></td></tr><tr><td class="m_l"' + evt + ')">&nbsp;&nbsp;</td><td class="m_c" id="fwin_content_' + k + '">'
++ '</td><td class="m_r"' + evt + '"></td></tr><tr><td class="b_l"></td><td class="b_c"' + evt + '></td><td class="b_r"></td></tr></table>';
+if(mode == 'html') {
+$('fwin_content_' + k).innerHTML = url;
+initMenu();
+show();
+} else {
+fetchContent();
+}
+} else if((mode == 'get' && (url != menuObj.url || cache != 1)) || (mode == 'post' && $(url).action != menuObj.act)) {
+fetchContent();
+} else {
+show();
+}
+doane();
+}
+function InitNewReply(){
+var postsubmitObj=document.getElementById("postsubmit");
+postsubmitObj.setAttribute("onclick", "if(typeof(pgvSendClickQt)!='undefined'){var tag1='BBS.LOL.WEB.NEWREPLY';pgvSendClickQt({hottag:tag1});}");
+}
+
+                        ajaxget("http://bbs.lol.qq.com/bbs_monitor.php?type=bottom");
+        </script><div id="pt" class="bm cl">
+            <div class="z">
+                <a href="./" class="nvhm" title="首页">《英雄联盟》官方论坛</a><em>&raquo;</em><a href="~/Index/Index">论坛首页</a>
+            </div>
+            <div class="z"></div>
+        </div>
+
+
+
+        <style id="diy_style" type="text/css"></style>
+
+        <div class="wp">
+            <!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+        </div>
+
+        <style>
+            .temp {
+                margin: 0px;
+            }
+
+            .pt1 {
+                margin-bottom: 10px;
+            }
+
+                .pt1 .pt1_banner {
+                    float: left;
+                    border: 1px solid #ddd;
+                    padding: 5px 10px 10px 10px;
+                    padding-bottom: 0;
+                }
+
+            .pt1_banner h2 {
+                margin-bottom: 5px;
+            }
+
+            .pt1 .pt1_banner .banner_img {
+                float: left;
+                width: 350px;
+                height: 170px;
+            }
+
+            .pt1 .pt1_banner .pt1_banner_news {
+                margin-left: 350px;
+                width: 125px;
+            }
+
+            .pt1 .pt1_banner .slidebar div {
+                float: left;
+                width: 125px;
+            }
+
+                .pt1 .pt1_banner .slidebar div a {
+                    display: block;
+                }
+
+            .pt1 .pt1_banner .slidebar img {
+                width: 125px;
+                height: 50px;
+                margin-bottom: 10px;
+            }
+
+            .pt1 .pt1_news {
+                margin-left: 510px;
+                border: 1px solid #DDDDDD;
+                height: 268px;
+            }
+
+            .pt1_news .tb {
+                margin-top: 0;
+                padding-left: 0;
+                line-height: 25px;
+                border-bottom: 0;
+                height: 25px;
+                overflow: hidden;
+                height: 25px;
+                background: url(../../Images/tabbg.gif) repeat-x 0 0;
+            }
+
+            .pt1 .pt1_news .pt1_news_1 {
+                border-bottom: 1px dashed #e3e3e6;
+                height: 80px;
+                overflow: hidden;
+            }
+
+                .pt1 .pt1_news .pt1_news_1 h2, .pt1 .pt1_news .pt1_news_1 h2 a.link {
+                    font: bold 18px "Microsoft YaHei";
+                    margin-bottom: 10px;
+                    color: #ff9900;
+                }
+
+                    .pt1 .pt1_news .pt1_news_1 h2 a.link:hover {
+                        color: #ffb13b;
+                    }
+
+                .pt1 .pt1_news .pt1_news_1 .text a.link {
+                    color: #999999;
+                    line-height: 17px;
+                }
+
+                    .pt1 .pt1_news .pt1_news_1 .text a.link:hover {
+                        color: #3e91f3;
+                    }
+
+            .pt1 .pt1_news .pt1_news_list {
+                margin-top: 10px;
+            }
+
+            .pt1 .pt1_news .listol {
+                padding: 10px;
+            }
+
+            .pt1 .pt1_news .tb li {
+                height: 25px;
+                margin: 0;
+                border-right: 1px solid #FFFFFF;
+            }
+
+                .pt1 .pt1_news .tb li a {
+                    color: #666666;
+                    display: inline-block;
+                    height: 24px;
+                    line-height: 24px;
+                    float: left;
+                    background: none;
+                    border: 0;
+                }
+
+                .pt1 .pt1_news .tb li.a {
+                    background: #FFFFFF;
+                }
+
+            .pt1 .pt1_news .pt1_news_list li a:hover {
+                color: #3e91f3;
+            }
+
+            .pt1 .pt1_news .pt1_news_list li a.area {
+                width: 75px;
+            }
+
+            .pt1 .pt1_news .pt1_news_list li a.content {
+                width: 270px;
+            }
+
+            .pt1_news .lightitem a, .pt1_news .lightitem em a {
+                color: #e9811a;
+            }
+
+            .pt1_news .nbg {
+                background: #FFF;
+            }
+
+            .pt1_news .tb .a a {
+                color: #a2875a;
+                font-weight: normal;
+                border: 0;
+            }
+        </style>
+
+        <div id="ct" class="wp cl">
+            <div id="chart" class="bm bw0 cl">
+                <p class="chart z">今日: <em>438</em><span class="pipe">|</span>昨日: <em>583</em><span class="pipe">|</span>帖子: <em>36801133</em><span class="pipe">|</span>会员: <em>73290559</em></p>
+                <div class="y">
+                </div>
+            </div>
+
+
+            <div class="pt1 cl">
+                <div class="pt1_banner">
+                    <h2 class="txt-green xw0">最新热图</h2>
+                    <div class="slidebox" timestep="5000">
+                        <div class="picbox slideshow z"><a href="forum.php?mod=viewthread&tid=4581869" target="_blank">
+    <img src="~/Images/5493b394af3149c4a160bc91a9ef2dd8.gif" width="340" height="230" /></a><a href="forum.php?mod=viewthread&tid=4587311" target="_blank" ><img src="~/Images/9e4861cd830d4398adfc56627a06b981.gif" width="340" height="230" /></a><a href="forum.php?mod=viewthread&tid=4579016" target="_blank" ><img src="~/Images/8803492379954a9290e87ef8ce63cb63.gif" width="340" height="230" /></a><a href="forum.php?mod=viewthread&tid=4577552" target="_blank" ><img src="~/Images/28e77d95fd0042eea2584d9712165354.gif" width="340" height="230" /></a></div>
+                        <div class="pt1_banner_news">
+                            <div class="slidebar" mevent="mouseover">
+                            <img src="~/Images/5493b394af3149c4a160bc91a9ef2dd8.gif" class="img-kuandu"  />
+                            <img src="~/Images/9e4861cd830d4398adfc56627a06b981.gif" class="img-kuandu"/>
+                            <img src="~/Images/8803492379954a9290e87ef8ce63cb63.gif" class="img-kuandu"/>
+                            <img src="~/Images/28e77d95fd0042eea2584d9712165354.gif" class="img-kuandu" /></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+runslideshow();
+                    </script>
+                </div>
+                <div class="pt1_news">
+                    <ul class="tb cl">
+                        <li id="indexbox_1" class="a" onmouseover="switchTab('indexbox',1,3,'a');"><a href="javascript:;" class="a">今日热点</a></li>
+                        <li id="indexbox_2" onmouseover="switchTab('indexbox',2,3,'a');"><a href="javascript:;">版友推荐</a></li>
+                        <li id="indexbox_3" onmouseover="switchTab('indexbox',3,3,'a');"><a href="javascript:;">每周热点</a></li>
+                    </ul>
+                    <div id="indexbox_c_1" class="listol" style="display:block;">
+                        <div class="module cl xl xl1">
+                            <ol><li class="lightitem"><em><a href="home.php?mod=space&uid=763171" target="_blank">小木槿</a></em><a href="forum.php?mod=viewthread&tid=4428998" title="【问拳头第六十期】英雄的平衡" target="_blank"><font style="font-weight: 900;color: #FF0000;">【问拳头第六十期】英雄的平衡</font></a></li><li class="lightitem"><em><a href="home.php?mod=space&uid=24534300" target="_blank">lol_莫莫酱</a></em><a href="forum.php?mod=viewthread&tid=4444255" title="戏精撸妹儿邀你关注英雄联盟快手&amp;抖音号" target="_blank"><font style="font-weight: 900;color: #426ab3;">戏精撸妹儿邀你关注英雄联盟快手&amp;抖音号</font></a></li><li class="lightitem"><em><a href="home.php?mod=space&uid=69318694" target="_blank">lol_妖娆i</a></em><a href="forum.php?mod=viewthread&tid=4469603" title="秩序殿堂 - 演员举报专贴" target="_blank"><font style="font-weight: 900;color: #426ab3;">秩序殿堂 - 演员举报专贴</font></a></li><li><em><a href="home.php?mod=space&uid=317362" target="_blank">MVP_Sona</a></em><a href="forum.php?mod=viewthread&tid=4472200" title="【招募】为英雄而战 重金招募美工小能手" target="_blank"><font style="font-weight: 900;color: #426ab3;">【招募】为英雄而战 重金招募美工小能手</font></a></li><li><em><a href="home.php?mod=space&uid=317362" target="_blank">MVP_Sona</a></em><a href="forum.php?mod=viewthread&tid=4466576" title="冠军杯赛将至，诚邀你作为先行体验者征战峡" target="_blank"><font style="font-weight: 900;color: #426ab3;">冠军杯赛将至，诚邀你作为先行体验者征战峡</font></a></li><li><em><a href="home.php?mod=space&uid=62436875" target="_blank">MVP_鸡翅</a></em><a href="forum.php?mod=viewthread&tid=4476868" title="【电竞818】谁说WE穷？GAY虎又上线了" target="_blank"><font style="font-weight: 900;color: #426ab3;">【电竞818】谁说WE穷？GAY虎又上线了</font></a></li><li><em><a href="home.php?mod=space&uid=72611063" target="_blank">娱乐圈丶高乐高</a></em><a href="forum.php?mod=viewthread&tid=4475501" title="【胡撸扒道】Mystic染回黑发 RNG定妆照花絮" target="_blank"><font style="font-weight: 900;color: #426ab3;">【胡撸扒道】Mystic染回黑发 RNG定妆照花絮</font></a></li><li><em><a href="home.php?mod=space&uid=49250560" target="_blank">MVP_风声</a></em><a href="forum.php?mod=viewthread&tid=4498226" title="【话题】美测服：剑魔改动测试，QR或将削弱" target="_blank"><font style="font-weight: 900;color: #426ab3;">【话题】美测服：剑魔改动测试，QR或将削弱</font></a></li><li><em><a href="home.php?mod=space&uid=71407443" target="_blank">MVP_009</a></em><a href="forum.php?mod=viewthread&tid=4578060" title="【新闻】LPL上单有崛起之势，Uzi偶遇Bang" target="_blank"><font style="font-weight: 900;color: #426ab3;">【新闻】LPL上单有崛起之势，Uzi偶遇Bang</font></a></li><li><em><a href="home.php?mod=space&uid=62436875" target="_blank">MVP_鸡翅</a></em><a href="forum.php?mod=viewthread&tid=4478734" title="【话题】版本预读之上单的选择" target="_blank"><font style="font-weight: 900;color: #426ab3;">【话题】版本预读之上单的选择</font></a></li></ol>
+                        </div>
+                    </div>
+                    <div id="indexbox_c_2" class="listol" style="display:none">
+                        <div class="module cl xl xl1">
+                            <ol><li class="lightitem"><em><a href="home.php?mod=space&uid=804272" target="_blank">didi灬</a></em><a href="forum.php?mod=viewthread&tid=4644510" title="【论坛自制壁纸】我把藏了好久的壁纸晒出来" target="_blank">【论坛自制壁纸】我把藏了好久的壁纸晒出来</a></li><li class="lightitem"><em><a href="home.php?mod=space&uid=804272" target="_blank">didi灬</a></em><a href="forum.php?mod=viewthread&tid=4431099" title="【漫画小剧场】祝大家狗年吉祥，万事胜意" target="_blank"><font style="font-weight: 900;">【漫画小剧场】祝大家狗年吉祥，万事胜意</font></a></li><li class="lightitem"><em><a href="home.php?mod=space&uid=40375283" target="_blank">LOL战争学院_超神小黄鸭</a></em><a href="forum.php?mod=viewthread&tid=4403729" title="【壁纸】-佐伊和她的新朋友" target="_blank"><font style="font-weight: 900;color: #f58220;">【壁纸】-佐伊和她的新朋友</font></a></li><li><em><a href="home.php?mod=space&uid=70220865" target="_blank">金克十</a></em><a href="forum.php?mod=viewthread&tid=4403274" title="【表情】小可爱约德尔人表情包献上" target="_blank"><font style="font-weight: 900;color: #c77eb5;">【表情】小可爱约德尔人表情包献上</font></a></li><li><em><a href="home.php?mod=space&uid=3042137" target="_blank">LOL_Emilia</a></em><a href="forum.php?mod=viewthread&tid=4360156" title="【表情】小佐伊和你玩" target="_blank"><font style="font-weight: 900;color: #c77eb5;">【表情】小佐伊和你玩</font></a></li><li><em><a href="home.php?mod=space&uid=70473549" target="_blank">LOL_abmXEuDtA4</a></em><a href="forum.php?mod=viewthread&tid=4342476" title="【壁纸】给我一支冰淇淋+源计划厄运小姐" target="_blank"><font style="font-weight: 900;color: #c77eb5;">【壁纸】给我一支冰淇淋+源计划厄运小姐</font></a></li><li><em><a href="home.php?mod=space&uid=47263996" target="_blank">失控的卢瑟</a></em><a href="forum.php?mod=viewthread&tid=4389067" title="【表情】萌萌哒约德尔人表情~" target="_blank"><font style="font-weight: 900;color: #c77eb5;">【表情】萌萌哒约德尔人表情~</font></a></li><li><em><a href="home.php?mod=space&uid=732110" target="_blank">Chocolatebaby丶</a></em><a href="forum.php?mod=viewthread&tid=4347501" title="【表情】佐伊萌萌哒～" target="_blank"><font style="font-weight: 900;color: #c77eb5;">【表情】佐伊萌萌哒～</font></a></li><li><em><a href="home.php?mod=space&uid=42179885" target="_blank">LOL_天涯1孤魂</a></em><a href="forum.php?mod=viewthread&tid=4357565" title="【壁纸】爱萝莉真是太好了" target="_blank"><font style="font-weight: 900;color: #c77eb5;">【壁纸】爱萝莉真是太好了</font></a></li><li><em><a href="home.php?mod=space&uid=70220865" target="_blank">金克十</a></em><a href="forum.php?mod=viewthread&tid=4366143" title="【壁纸】你觉得我很疯狂,你该看看我的姐妹" target="_blank"><font style="font-weight: 900;color: #c77eb5;">【壁纸】你觉得我很疯狂,你该看看我的姐妹</font></a></li></ol>
+                        </div>
+                    </div>
+                    <div id="indexbox_c_3" class="listol" style="display:none">
+                        <div class="module cl xl xl1">
+                            <ol><li class="lightitem"><em><a href="home.php?mod=space&uid=763171" target="_blank">小木槿</a></em><a href="forum.php?mod=viewthread&tid=4428998" title="【问拳头第六十期】英雄的平衡" target="_blank"><font style="font-weight: 900;color: #FF0000;">【问拳头第六十期】英雄的平衡</font></a></li><li class="lightitem"><em><a href="home.php?mod=space&uid=317362" target="_blank">MVP_Sona</a></em><a href="forum.php?mod=viewthread&tid=4358051" title="英雄联盟官方论坛版主团全版招募启动" target="_blank"><font style="font-weight: 900;color: #FF0000;">英雄联盟官方论坛版主团全版招募启动</font></a></li><li class="lightitem"><em><a href="home.php?mod=space&uid=72611063" target="_blank">娱乐圈丶高乐高</a></em><a href="forum.php?mod=viewthread&tid=4475502" title="【七嘴八舌】Faker另类喜感，Uzi或缺席后续" target="_blank"><font style="font-weight: 900;color: #1d953f;">【七嘴八舌】Faker另类喜感，Uzi或缺席后续</font></a></li><li><em><a href="home.php?mod=space&uid=72611063" target="_blank">娱乐圈丶高乐高</a></em><a href="forum.php?mod=viewthread&tid=4475503" title="【皮埃斯公馆】锤石竟钟情泡面无法自拔" target="_blank"><font style="font-weight: 900;color: #1d953f;">【皮埃斯公馆】锤石竟钟情泡面无法自拔</font></a></li><li><em><a href="home.php?mod=space&uid=72611063" target="_blank">娱乐圈丶高乐高</a></em><a href="forum.php?mod=viewthread&tid=4475504" title="【每周一污】无情AD最致命，联盟套路多" target="_blank"><font style="font-weight: 900;color: #1d953f;">【每周一污】无情AD最致命，联盟套路多</font></a></li><li><em><a href="home.php?mod=space&uid=24534300" target="_blank">lol_莫莫酱</a></em><a href="forum.php?mod=viewthread&tid=4575962" title="【防坑大指南】8月17日周免攻略" target="_blank"><font style="font-weight: 900;color: #1d953f;">【防坑大指南】8月17日周免攻略</font></a></li><li><em><a href="home.php?mod=space&uid=72611063" target="_blank">娱乐圈丶高乐高</a></em><a href="forum.php?mod=viewthread&tid=4475505" title="【囧图】锐雯，你为何永远如此亢奋？" target="_blank"><font style="font-weight: 900;color: #1d953f;">【囧图】锐雯，你为何永远如此亢奋？</font></a></li><li><em><a href="home.php?mod=space&uid=72611063" target="_blank">娱乐圈丶高乐高</a></em><a href="forum.php?mod=viewthread&tid=4475506" title="【每周一辩】你会教你的另一半打游戏吗？" target="_blank"><font style="font-weight: 900;color: #1d953f;">【每周一辩】你会教你的另一半打游戏吗？</font></a></li><li><em><a href="home.php?mod=space&uid=44265793" target="_blank">lol_甜sweet</a></em><a href="forum.php?mod=viewthread&tid=4465248" title="【创意聚焦】星之卡比带走属于你的专属英雄" target="_blank"><font style="font-weight: 900;color: #1d953f;">【创意聚焦】星之卡比带走属于你的专属英雄</font></a></li><li><em><a href="home.php?mod=space&uid=50531878" target="_blank">蜘蛛女皇丶颜末</a></em><a href="forum.php?mod=viewthread&tid=4478330" title="[美女月刊第三十七期]缤纷夏日，冰淇淋绚烂" target="_blank"><font style="font-weight: 900;color: #1d953f;">[美女月刊第三十七期]缤纷夏日，冰淇淋绚烂</font></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="wp topbox bm cl">
+            <div class="t-box"> </div>
+            <div class="t-box"> </div>
+            </div>-->
+
+            <div class="mn">
+
+                @*分区板块开始*@
+                <div class="fl bm">
+                    @foreach (var item in Model)
+                    {
+                    <div class="bm bmw  flg cl">
+                        <div class="bm_h cl">
+                            <span class="o">
+                                <img id="category_1_img" src="~/Images/collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_1');" />
+                            </span>
+                            <span class="y">分区版主: <a href="home.php?mod=space&username=Liwan" class="notabs" c="1">Liwan</a>, <a href="home.php?mod=space&username=lol_%E7%A5%9E%E4%B8%80%E6%A0%B7%E7%9A%84%E5%A5%B3%E6%B1%89%E7%BA%B8" class="notabs" c="1">lol_神一样的女汉纸</a>, <a href="home.php?mod=space&username=lol_fizz" class="notabs" c="1">lol_fizz</a>, <a href="home.php?mod=space&username=lol_%E4%B8%80%E5%8F%AA%E6%BD%9C%E6%B0%B4%E7%8C%AB" class="notabs" c="1">lol_一只潜水猫</a>, <a href="home.php?mod=space&username=lol_leonoe" class="notabs" c="1">lol_leonoe</a></span><h2><a href="#" style="">@item.Partname</a></h2>
+                        </div>
+                        <div id="category_1" class="bm_c" style="">
+                            <table cellspacing="0" cellpadding="0" class="fl_tb">
+                                <tr>
+                                    @*遍历板块*@
+                                    @foreach (var bankuai in item.BanKuai)
+                                    {
+                                        <td class="fl_g" width="32.9%">
+                                            <div class="fl_icn_g" style="width: 64px;">
+                                                <a href="~/TieZi/List/@bankuai.Id"><img src="~/Images/@bankuai.Name" align="left" alt="" /></a>
+                                            </div>
+                                            <dl style="margin-left: 64px;">
+                                                <dt><a href="~/TieZi/List/@bankuai.Id">@bankuai.Pic</a><em class="xw0 xi1" title="今日"> (178)</em></dt>
+                                                <dd><em>主题: <span title="1766306">176万</span></em>, <em>帖数: <span title="19393952">1939万</span></em></dd>
+                                                <dd>
+                                                    <a href="forum.php?mod=redirect&amp;tid=4665305&amp;goto=lastpost#lastpost">最后发表: 2019-3-16 21:50</a>
+                                                </dd>
+                                            </dl>
+                                        </td>
+                                    }
+                                    
+                                    
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    }
+                </div>
+                @*分区板块结束*@
+                <div class="wp mtn">
+                    <!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+                </div>
+
+                <div id="online" class="bm oll">
+                    <div class="bm_h">
+                        <h3>
+                            <strong>
+                                在线会员
+                            </strong>
+                            <span class="xs1">
+                                - 总计 <strong>583</strong> 人在线
+                                - <strong>58</strong> 会员,<strong>525</strong> 位游客- 最高记录是 <strong>925970</strong> 于 <strong>2017-5-20</strong>.
+                            </span>
+                        </h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="focus" id="sitefocus">
+        @*
+    <div class="bm">
+            <div class="bm_h cl">
+                <a href="javascript:;" onclick="setcookie('nofocus_forum', 1, 1*3600);$('sitefocus').style.display='none'" class="y" title="关闭">关闭</a>
+                <h2>
+                    英雄联盟官方论坛<span id="focus_ctrl" class="fctrl"><img src="~/Images/pic_nv_prev.gif" alt="上一条" title="上一条" id="focusprev" class="cur1" onclick="showfocus('prev');" /> <em><span id="focuscur"></span>/1</em> <img src="~/Images/pic_nv_next.gif" alt="下一条" title="下一条" id="focusnext" class="cur1" onclick="showfocus('next')" /></span>
+                </h2>
+            </div>
+            <div class="bm_c" id="focus_con">
+            </div>
+        </div>
+    *@
+      </div><div class="bm_c" style="display: none" id="focus_0">
+        <dl class="xld cl bbda">
+            <dt><a href="http://bbs.lol.qq.com/forum.php?mod=viewthread&tid=3960478" class="xi2" target="_blank">版主招募</a></dt>
+            <dd class="m"><a href="http://bbs.lol.qq.com/forum.php?mod=viewthread&tid=3960478" target="_blank"><img src="~/Images/7c3594057d4d414ba64df461a19bacdc.gif" alt="版主招募" /></a></dd>
+            <dd>英雄联盟官方论坛版主团全版面招募再度开启，想为官方论坛奉献自己的一份力量吗？赶紧报名吧>>></dd>
+        </dl>
+        <p class="ptn cl"><a href="http://bbs.lol.qq.com/forum.php?mod=viewthread&tid=3960478" class="xi2 y" target="_blank">查看 &raquo;</a></p>
+    </div>
+    <script type="text/javascript">
+var focusnum = 1;
+if(focusnum < 2) {
+$('focus_ctrl').style.display = 'none';
+}
+if(!$('focuscur').innerHTML) {
+var randomnum = parseInt(Math.round(Math.random() * focusnum));
+$('focuscur').innerHTML = Math.max(1, randomnum);
+}
+showfocus();
+var focusautoshow = window.setInterval('showfocus(\'next\', 1);', 5000);
+    </script>
+
+
+    <div id="wechat_float_qrcode" class="p_pop xg1" style="display:none;text-align:center;float:left;position:fixed;top:220px;z-index:100;margin-left: 2px;width:110px">
+        <p class="cl"><img class="y" style="cursor:pointer" onclick="display('wechat_float_qrcode');setcookie('wechatfqrc', 1, 86400)" src="~/Images/ad_close.gif"></p>
+        <img src="~/Images/plugin.png" width="98" />
+        <p>用微信扫一扫<br />互动赢积分</p>
+    </div>
+    <script>
+function wechat_qrcode(type) {
+if(type && $('wechat_float_qrcode').style.display == 'none') {
+return;
+}
+var qrleft = parseInt($('ft').clientWidth + parseInt(fetchOffset($('ft'))['left']));
+$('wechat_float_qrcode').style.display = '';
+if(qrleft + $('wechat_float_qrcode').clientWidth > document.documentElement.clientWidth) {
+$('wechat_float_qrcode').style.cssFloat = 'right';
+$('wechat_float_qrcode').style.left = 'auto';
+$('wechat_float_qrcode').style.right = 0;
+} else {
+$('wechat_float_qrcode').style.cssFloat = 'left';
+$('wechat_float_qrcode').style.left = (qrleft) + 'px';
+$('wechat_float_qrcode').style.right = 'auto';
+}
+}
+_attachEvent(window, 'scroll', function () { wechat_qrcode(1); })
+_attachEvent(window, 'load', function() { wechat_qrcode(0); }, document);
+    </script>
+
+    <div id="ft" class="wp cl">
+        <div id="flk" class="y">
+            <p>
+                <a href="archiver/">Archiver</a><span class="pipe">|</span><a href="forum.php?mobile=yes">手机版</a><span class="pipe">|</span><strong><a href="http://bbs.lol.qq.com/" target="_blank">论坛首页</a></strong>
+                &nbsp;<a href="http://discuz.qq.com/service/security" target="_blank" title="防水墙保卫网站远离侵害"><img src="~/Images/security.png"></a>&nbsp;&nbsp;<span id="tcss"></span>
+                
+    <script type="text/javascript" src="~/scripts/ping.js" charset="utf-8"></script>
+                <script type="text/javascript" reload="1">pgvMain({"discuzParams":{"r2":"9195940","ui":0,"rt":"forum","md":"index","pn":1,"qq":"000","logo":11},"extraParams":""});</script>
+            </p>
+            <p class="xs0">
+                GMT+8, 2019-3-16 22:00<span id="debuginfo">
+                    , Processed in 0.089953 second(s), 0 queries
+                    , Gzip On, Memcache On.
+                </span>
+            </p>
+        </div>
+        <div id="frt">
+            <p>Powered by <strong><a href="http://www.discuz.net" target="_blank">Discuz!</a></strong> <em>X2.5</em></p>
+            <p class="xs0">&copy; 2001-2012 <a href="http://www.comsenz.com" target="_blank">Comsenz Inc.</a></p>
+        </div>
+    </div>
+
+    <div id="g_upmine_menu" class="tip tip_3" style="display:none;">
+        <div class="tip_c">
+            积分 0, 距离下一级还需  积分
+        </div>
+        <div class="tip_horn"></div>
+    </div>
+    <span id="scrolltop" onclick="window.scrollTo('0','0')">回顶部</span>
+    <script type="text/javascript">_attachEvent(window, 'scroll', function(){showTopLink();});checkBlind();</script>
+    <div id="discuz_tips" style="display:none;"></div>
+    <script type="text/javascript">
+				var discuzSId = '9195940';
+				var discuzVersion = 'X2.5';
+				var discuzRelease = '20151208';
+				var discuzApi = '0.6';
+				var discuzIsFounder = '';
+				var discuzFixbug = '25160122';
+				var discuzAdminId = '0';
+				var discuzOpenId = '';
+				var discuzUid = '0';
+				var discuzGroupId = '7';
+				var ts = '1552744843';
+				var sig = 'ab9288437bebd6154d6d1e754945724f';
+				var discuzTipsCVersion = '2';
+    </script>
+    
+    @*<script src="~/scripts/discuz_tips.js" type="text/javascript" charset="UTF-8"></script>
+    *@
+         <script type="text/javascript">
+			if($('debuginfo')) {
+				$('debuginfo').innerHTML = '. This page is cached  at 22:00:43 , Gzip enabled .';
+			}
+    </script>
+</body>
+    </html>

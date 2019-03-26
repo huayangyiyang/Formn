@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d8d27b3b443844e996b69e5c6be09830" Name="Diagram1">
+        <EntityTypeShape EntityType="ForumModel.BanKuai" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ForumModel.Partition" Width="1.5" PointX="1.5" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ForumModel.Reply" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ForumModel.TieZi" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ForumModel.UserInfo" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="ForumModel.FK__BanKuai__partnum__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="ForumModel.FK__TieZi__BanKuaiId__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="ForumModel.FK__Reply__TieZiId__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="ForumModel.FK__Reply__UserId__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="ForumModel.FK__TieZi__SenderId__1B0907CE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
